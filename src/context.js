@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 const RoomContext = React.createContext();
 // <RoomContext.Provider value={}
 
 
-export default class RoomProvider extends Component {
-    state = {
+ class RoomProvider extends Component {
+     state = {
+         greeting: 'hello',
+         name: 'John'
+     };
 
-    }
-
-    render() {
-        return (
-            <RoomProvider.Provider value="hello">
+     render(){
+         return (
+             <RoomContext.Provider value={{...this.state}}>
                 {this.props.children}
-            </RoomProvider.Provider>
+            </RoomContext.Provider>
         )
     }
-}
+ }
+export default RoomProvider;
 
 const RoomConsumer = RoomContext.Consumer;
-
-export {RoomProvider,RoomConsumer, RoomContext}
+export { RoomProvider, RoomConsumer, RoomContext };
