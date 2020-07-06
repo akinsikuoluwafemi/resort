@@ -10,7 +10,7 @@ export default class Services extends Component {
         services: [
             {
                 icon: <FaCocktail />,
-                title: "free cocktails",
+                title: "Free cocktails",
                 info: "lorem2 lorem2 lorem2 lorem2 lorem2 lorem2 lorem2"
             },
             {
@@ -40,6 +40,8 @@ export default class Services extends Component {
                     {this.state.services.map((item,index) => {
                         return <article key={index} className="services">
                             <span>{item.icon}</span>
+                            <h6>{item.title}</h6>
+                            <p>{item.info}</p>
                         </article>
                     })}
                 </div>   
