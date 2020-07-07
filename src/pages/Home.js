@@ -22,8 +22,8 @@ import Button from '../components/StyledHero';
              
              <Services />
              <FeaturedRooms/>
-            <Button>Hello</Button>
-        </>
+            
+         </>
     )
 }
 
